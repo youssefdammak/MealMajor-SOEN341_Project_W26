@@ -21,9 +21,11 @@ function LandingPage() {
   return (
     <>
       <div style={{ margin: "auto", width: "100%" }}>
-        <SearchBar onSearch={(query) => navigate("/search")} />
         <br></br>
         <h2 style={{ textAlign: "center" }}>Welcome back {userName}!</h2>
+        <button className="search-button" onClick={() => navigate("/search")}>
+          Search ALL Recipes
+        </button>
         <h3 style={{ textAlign: "center" }}>
           These are the Recipes customized for you:
         </h3>
