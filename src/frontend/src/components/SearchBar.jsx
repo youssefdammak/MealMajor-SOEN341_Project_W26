@@ -10,9 +10,8 @@ function SearchBar({ onSearch, placeholder = "Search our Recipes!" }) {
     const trimmedQuery = query.trim();
     //avoids empty submit
     if (!trimmedQuery) return;
-
-    onSearch(trimmedQuery);
     setQuery("");
+    onSearch(trimmedQuery);
   };
 
   return (
