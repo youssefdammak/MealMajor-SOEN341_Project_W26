@@ -127,7 +127,7 @@ body {
   width:100%;
   z-index:100000;
   background-color:white;
-  margin-bottom:5%;
+  margin-bottom:0%;
   display:flex;
   /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
   justify-content: space-between;
@@ -144,6 +144,7 @@ body {
 
 /*Searchbar Styles*/
 .searchbar-form{
+  margin-top:5%;
   
   display:flex;
   justify-content: center;
@@ -198,7 +199,11 @@ body {
   cursor: pointer;
   box-sizing: border-box;
 }
-
+.recipe-card:hover{
+  transition: ease-in-out 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 .recipe-card-display {
   position: fixed;
   top: 0;
@@ -224,7 +229,7 @@ body {
   max-height: 85vh;
   overflow-y: auto;
   background: white;
-  padding: 16px;
+  padding: 30px;
   border-radius: 8px;
 }
 
