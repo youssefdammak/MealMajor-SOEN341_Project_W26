@@ -216,6 +216,10 @@ body {
 .recipe-name{
   color:#2e77ca;
 }
+.filter-header{
+  font-weight: bold;
+  color: #2e77ca;
+}
 .recipe-card-display .recipe-card {
   flex: 1 1 260px;
   position: relative;
@@ -249,4 +253,18 @@ body {
   border:none;
   border-radius:4px;
   cursor:pointer;
+}
+
+.filter-ui {
+            margin: 20px auto;
+            max-width: 1500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            background-color: white;
+            align-items: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            gap: 24px
 }
