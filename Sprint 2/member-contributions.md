@@ -29,6 +29,9 @@
 | assist: Assisted in the Sprint 1 Table | 15 min |                           |
 | assist: #4 Design Login UI | 17 min
 | Review: PR reviews | 21 min | 
+| Task: #65 implemented logic that shows only the recipes that match users diet preferences | 140 min |                                             |
+| Task: #64 added filters and implemented their logic | 160 min | 
+| Task:  #42 Recipe Search logic  | 40 min                      |
 
 ### Kaue Fortuna - 40309019 - Frontend DEV
 | Item                        | Time      | Notes (If needed)                                               |
@@ -48,12 +51,14 @@
 | Item                        | Time      | Notes (If needed)                                               |
 |-----------------------------|-----------|------------------------------------------------------------------|
 | Logged Meeting minutes         | 60 min |                |
-| Task: #18 Create filter UI | 60 min |  |
-| Task: #27 Implement frontend filtering logic | 60 min |  |
+| Task: #8 Design Profile Preferences UI | 60 min |  |
 | CSS styling | 15 min |     
-| Review: Recipes display UI | 10 min |                                             |
-| Review: Search UI | 10 min | 
-| Review: Search logic | 15 min |                                                 |
+| Review: Login UI | 10 min |                                             |
+| Review: Registration UI | 10 min | 
+| Review: Landing page UI | 15 min |                                                 |
+| Review: User Page UI | 10 min |     
+| Review + fix: #9 Backend Preferences Storage | 45 min |                           |
+| Connect preferences frontend and backend | 60 min |                           |
 
 ### Lasmar Khalifa - 40321544 - Backend DEV
 | Item                        | Time      | Notes (If needed)                                               |
@@ -71,4 +76,3 @@
 | Task: Send Sign Up Data to Backend        | 180 min |                |
 | Task: Login Auth Work in Frontend        | 60 min |                |
 | Task: Set Up Github Repo        | 15 min |                |
-
