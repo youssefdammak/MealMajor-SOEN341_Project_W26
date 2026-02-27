@@ -4,10 +4,10 @@
 ### Meeting Details
 
 Sprint: 02 
-Meeting Number: 4 
+Meeting Number: 4  
 Date: February 22, 2026  
 Duration: 30 minutes  
-Meeting Mode: Online 
+Meeting Mode: Online   
 Meeting Location: Discord 
 
 ### Attendance:
