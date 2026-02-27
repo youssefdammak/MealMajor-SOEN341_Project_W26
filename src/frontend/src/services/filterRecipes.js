@@ -25,7 +25,7 @@ export function filterRecipes(
     // Prep time filter
     if (prepTime) {
       let mins = 0;
-      const timeStr = recipe.preparationTime.toLowerCase();
+      const timeStr = (recipe.preparationTime || recipe.prepTime || "").toLowerCase();
       const hourMatch = timeStr.match(/(\d+)\s*hour/);
       const minMatch = timeStr.match(/(\d+)\s*min/);
       if (hourMatch) mins += parseInt(hourMatch[1], 10) * 60;
