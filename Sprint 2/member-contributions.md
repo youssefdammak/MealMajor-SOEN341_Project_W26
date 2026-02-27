@@ -60,11 +60,11 @@
 ### Lasmar Khalifa - 40321544 - Backend DEV
 | Item                        | Time      | Notes (If needed)                                               |
 |-----------------------------|-----------|------------------------------------------------------------------|
-| Backend for user preferences (Task 9)          | 180 min |                |
-| Created task #30 | 15 min |  |
-| Tested preferences API with Postman | 60 min |                                             |
-| Tested front end - account creation | 15 min |                                             |
-| Tested front end - account login and preferences page | 15 min |                           |
+| Backend for recipes (Task 17)          | 200 min |                |
+| Created task #17 | 30 min |  |
+| Tested recipes API with Postman | 60 min |                                             |
+| Backend for recipes - user id retrieval | 60 min |                                             |
+| Tested recipes API for user id retrieval | 25 min |                           |
 
 ### Gayane Petrosyan - 40311469 - Backend/Database DEV
 | Item                        | Time      | Notes (If needed)                                               |
