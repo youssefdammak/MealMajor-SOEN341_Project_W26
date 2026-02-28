@@ -29,16 +29,12 @@
 ### Kaue Fortuna - 40309019 - Frontend DEV
 | Item                        | Time      | Notes (If needed)                                               |
 |-----------------------------|-----------|------------------------------------------------------------------|
-| Design Registration UI         | 40 min |                |
-| Design Login UI | 40 min |  |
-| Client-Side Login Validation | 15 min |                                             |
-| Navigation Bar | 60 min |                                             |
-| Main Landing UI | 30 min |                           |
-| User Landing UI | 30 min |                           |
-| Display User Name in Userpage | 30 min |                           |
-| Connecting backend auth into frontend | 30 min |                           |
-| Navigation Routes | 15 min |                           |
-| CSS styling | 60 min |                           |
+| Design SearchBar UI      | 90 min |                |
+| RecipeResults component | 120 min |  |
+| User Recipes landing page  | 60 min |                                             |
+|Filter Search from SearchBar | 100 min |                                             |
+| New Prefences Page | 120 min |                           |
+| extra CSS styling | 45 min |                           |
 
 ### Jalen Bayne - 40273615 - Frontend/Backend DEV
 | Item                        | Time      | Notes (If needed)                                               |
