@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import Navbar from "./components/Navbar";
 import UserPage from "./pages/UserLanding";
 import PreferencesForm from "./components/PreferencesForm";
+import WeeklyMealPlannerPage from "./pages/WeeklyPlannerPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import RecipeResultPage from "./pages/RecipeResultPage.jsx";
@@ -27,6 +28,7 @@ function App() {
             element={<RecipeResultPage recipes={templateRecipes} />}
           />
           <Route path="/recipes" element={<RecipePage />} />
+          <Route path="/planner" element={<WeeklyMealPlannerPage />} />
         </Routes>
       </Router>
     </>

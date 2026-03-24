@@ -1,0 +1,134 @@
+import React, { useEffect, useState } from "react";
+import { getRecipes } from "../services/recipeService.js";
+import PlannerCell from "../components/PlannerCell.jsx";
+
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
+const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack"];
+
+function WeeklyMealPlannerPage() {
+  const [recipes, setRecipes] = useState([]);
+  const [meals, setMeals] = useState({});
+  const [selectedCell, setSelectedCell] = useState(null);
+
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+
+    if (userId) {
+      getRecipes(userId)
+        .then((data) => setRecipes(data || []))
+        .catch(() => setRecipes([]));
+    }
+  }, []);
+
+  //if getMeal or updateMeal are being weird let me know cause I this works as far as I tested but its a bit weird
+  const getMeal = (day, mealType) => {
+    //KEEP THIS CHECK or it breaks since looking into null
+    if (!meals[day]) return null;
+    return meals[day][mealType];
+  };
+
+  const updateMeal = (day, mealType, value) => {
+    //needs to duplicate meals object or the React re render doen't trigger and change doesnt show
+    const updatedMeals = { ...meals };
+    //select unique day
+    const updatedDay = { ...updatedMeals[day] };
+
+    updatedDay[mealType] = value;
+    updatedMeals[day] = updatedDay;
+
+    setMeals(updatedMeals);
+  };
+
+  //can't just pass the function since we're passing it donw to a component and it breaks otherwise
+  //also since the component will pass up which exact cell, AND THEN we can open
+  const openModal = (day, mealType) => {
+    setSelectedCell({ day, mealType });
+  };
+
+  const handleSelectRecipe = (recipe) => {
+    const day = selectedCell.day;
+    const mealType = selectedCell.mealType;
+
+    updateMeal(day, mealType, recipe);
+    setSelectedCell(null);
+  };
+  //same idea here
+  const handleDelete = (day, mealType) => {
+    updateMeal(day, mealType, null);
+  };
+
+  return (
+    <div className="planner_page">
+      <h2>Weekly Meal Planner</h2>
+
+      <div className="planner_grid">
+        <div className="planner_row">
+          <div></div>
+          {days.map((day) => (
+            <div key={day} className="planner_header">
+              {day}
+            </div>
+          ))}
+        </div>
+
+        {mealTypes.map((mealType) => (
+          <div key={mealType} className="planner_row">
+            <div className="planner_header">{mealType}</div>
+
+            {days.map((day) => (
+              <PlannerCell
+                meal={getMeal(day, mealType)}
+                day={day}
+                mealType={mealType}
+                onOpen={openModal}
+                onDelete={handleDelete}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {selectedCell && (
+        <div className="planner_overview" onClick={() => setSelectedCell(null)}>
+          <div className="planner_choice" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="close_button"
+              onClick={() => setSelectedCell(null)}
+            >
+              X
+            </button>
+
+            <h3>
+              {selectedCell.day} - {selectedCell.mealType}
+            </h3>
+
+            {recipes.length == 0 ? (
+              <p>No recipes found :(</p>
+            ) : (
+              recipes.map((recipe) => (
+                <button
+                  key={recipe.id}
+                  className="planner_button"
+                  onClick={() => handleSelectRecipe(recipe)}
+                >
+                  {recipe.name}
+                </button>
+              ))
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default WeeklyMealPlannerPage;
