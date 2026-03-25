@@ -78,6 +78,29 @@ function Navbar() {
               <button className="blue_button">Home</button>
             </Link>
           )}
+          {path === "/userpage" && (
+            <Link to="/planner">
+              <button className="blue_button">Plan Week</button>
+            </Link>
+          )}
+          {path === "/planner" && (
+            <>
+              <Link to="/recipes">
+                <button className="blue_button">My Recipes</button>
+              </Link>
+              <Link to="/profile">
+                <button className="blue_button">Profile</button>
+              </Link>
+              <Link to="/">
+                <button className="blue_button" onClick={logout}>
+                  LogOut
+                </button>
+              </Link>
+              <Link to="/userpage">
+                <button className="blue_button">Home</button>
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </>
