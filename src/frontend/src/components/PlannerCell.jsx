@@ -1,12 +1,12 @@
 import React from "react";
 
-function PlannerCell({ meal, day, mealType, onOpen, onDelete }) {
+function PlannerCell({ meal, day, mealType, onAdd, onEdit, onDelete }) {
   return (
     <div className="planner_cell">
       {meal ? (
         <div className="planner_cell_content">
           <p>{meal.name}</p>
-          <button className="blue_button" onClick={() => onOpen(day, mealType)}>
+          <button className="blue_button" onClick={() => onEdit(day, mealType)}>
             Edit
           </button>
           <button
@@ -17,7 +17,7 @@ function PlannerCell({ meal, day, mealType, onOpen, onDelete }) {
           </button>
         </div>
       ) : (
-        <button className="blue_button" onClick={() => onOpen(day, mealType)}>
+        <button className="blue_button" onClick={() => onAdd(day, mealType)}>
           Add meal
         </button>
       )}

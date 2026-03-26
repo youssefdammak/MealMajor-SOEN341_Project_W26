@@ -18,6 +18,7 @@ function WeeklyMealPlannerPage() {
   const [recipes, setRecipes] = useState([]);
   const [meals, setMeals] = useState({});
   const [selectedCell, setSelectedCell] = useState(null);
+  const [duplicateWarning, setDuplicateWarning] = useState(null);
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");
@@ -50,7 +51,19 @@ function WeeklyMealPlannerPage() {
 
   //can't just pass the function since we're passing it donw to a component and it breaks otherwise
   //also since the component will pass up which exact cell, AND THEN we can open
-  const openModal = (day, mealType) => {
+  const handleAdd = (day, mealType) => {
+    if (getMeal(day, mealType)) {
+      setDuplicateWarning(
+        `This meal slot already has a recipe assigned. Please edit or remove it first.`,
+      );
+      return;
+    }
+    setDuplicateWarning(null);
+    setSelectedCell({ day, mealType });
+  };
+
+  const handleEdit = (day, mealType) => {
+    setDuplicateWarning(null);
     setSelectedCell({ day, mealType });
   };
 
@@ -89,13 +102,21 @@ function WeeklyMealPlannerPage() {
                 meal={getMeal(day, mealType)}
                 day={day}
                 mealType={mealType}
-                onOpen={openModal}
+                onAdd={handleAdd}
+                onEdit={handleEdit}
                 onDelete={handleDelete}
               />
             ))}
           </div>
         ))}
       </div>
+
+      {duplicateWarning && (
+        <div className="planner_warning" role="alert">
+          <p>{duplicateWarning}</p>
+          <button onClick={() => setDuplicateWarning(null)}>Dismiss</button>
+        </div>
+      )}
 
       {selectedCell && (
         <div className="planner_overview" onClick={() => setSelectedCell(null)}>
