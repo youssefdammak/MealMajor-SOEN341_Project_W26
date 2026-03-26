@@ -2,7 +2,7 @@ import SearchBar from "../components/SearchBar.jsx";
 import { getRecipes } from "../services/recipeService.js";
 import RecipeResult from "../components/RecipeResult.jsx";
 import { filterRecipes } from "../services/filterRecipes.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RecipeFilterUI from "../components/RecipeFilterUI.jsx";
 
 function ReceipeResultPage() {
@@ -15,7 +15,7 @@ function ReceipeResultPage() {
   const [recipesLoaded, setRecipesLoaded] = useState(false);
 
   // Fetch user recipes on mount
-  useState(() => {
+  useEffect(() => {
     const userId = localStorage.getItem("userId");
     if (userId) {
       getRecipes(userId)
