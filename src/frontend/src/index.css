@@ -595,3 +595,77 @@ body {
   border-radius:4px;
   cursor:pointer;
 }
+
+.fridgeForm {
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 32px;
+  max-width: 1000px;
+  margin: 32px auto;
+}
+
+.fridgeForm h2 {
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.fridgeForm form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.fridgeForm input[type="text"],
+.fridgeForm input[type="number"],
+.fridgeForm select {
+  flex: 1;
+  padding: 8px;
+  margin-right: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.fridgeForm button {
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.fridgeForm button:hover {
+  background: #2b6cb0;
+}
+
+.actionButtons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.fridgeListContainer {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.fridgeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fridgeList li {
+  background: #edf2f7;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
