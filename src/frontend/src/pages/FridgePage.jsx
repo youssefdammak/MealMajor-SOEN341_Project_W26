@@ -140,14 +140,14 @@ export default function Fridge() {
             <div className="actionButtons">
                 {/* Need to add functionality to these buttons later*/}
                 <button
-                    onClick={() => alert('Search Recipes with selected items')}
+                    onClick={() => alert('Search Recipes with selected items: ' + getSelectedItems().map(i => `\n- ${i.ingredient} (${i.quantity} ${i.unit})`))}
                     disabled={selected.length === 0}
                 >
                     Search Recipes
                 </button>
                 {/*Need to add functionality to these buttons later*/}
                 <button
-                    onClick={() => alert('Create Grocery List with selected items')}
+                    onClick={() => alert('Create Grocery List with selected items: ' + getSelectedItems().map(i => `\n- ${i.ingredient} (${i.quantity} ${i.unit})`))}
                     disabled={selected.length === 0}
                 >
                     Create Grocery List
