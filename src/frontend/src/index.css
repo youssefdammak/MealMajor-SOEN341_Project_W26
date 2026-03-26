@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,155 +6,148 @@
 body {
   margin: 0;
   padding: 0;
-   min-height: 100vh;
-  background:#f0f4f8;
-  background-image: url('https://images.unsplash.com/photo-1495195134817-aeb325a55b65?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29va2luZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+  min-height: 100vh;
+  background: #f0f4f8;
+  background-image: url("https://images.unsplash.com/photo-1495195134817-aeb325a55b65?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29va2luZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
   background-size: cover;
- 
 }
 
-.Auth-Page{
-  display:flex;
+.Auth-Page {
+  display: flex;
   flex-direction: column;
-  width:80%;
-  max-width:400px;
+  width: 80%;
+  max-width: 400px;
   justify-content: center;
   margin: auto;
-  background:white;
-  border-radius:8px;
+  background: white;
+  border-radius: 8px;
   /*AI for shadow*/
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  padding:4%;
+  padding: 4%;
   margin-top: 5%;
 }
 
-.User-Page{
-  display:flex;
+.User-Page {
+  display: flex;
   flex-direction: column;
-  width:80%;
-  max-width:600px;
+  width: 80%;
+  max-width: 600px;
   justify-content: center;
   margin: auto;
-  background:white;
-  border-radius:8px;
+  background: white;
+  border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  padding:4%;
-  margin-top:5%;
+  padding: 4%;
+  margin-top: 5%;
 }
 
-.user-header{
-  font-size:20px;
+.user-header {
+  font-size: 20px;
   color: dimgray;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
-.auth-form{
-  display:flex;
+.auth-form {
+  display: flex;
   flex-direction: column;
-  gap:10px;
-  width:100%;
+  gap: 10px;
+  width: 100%;
 }
 
-.auth-form input{
+.auth-form input {
   padding: 10px;
-  border-radius:4px;
-  border:1px solid #cccccc;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
 }
-.auth-form input:focus{
+.auth-form input:focus {
   /*Ai for outline attribute*/
-  outline:none;
+  outline: none;
   border-color: #346fb3;
 }
 
-.auth-form button{
+.auth-form button {
   margin-top: 5px;
-  padding:10px;
+  padding: 10px;
   background-color: #4d8fd9;
-  color:white;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.auth-form button:hover{
+.auth-form button:hover {
   background-color: #3b78be;
 }
 
-.Auth-Page button{
+.Auth-Page button {
   margin-top: 5px;
-  padding:10px;
+  padding: 10px;
   background-color: #4d8fd9;
-  color:white;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.Auth-Page button:hover{
+.Auth-Page button:hover {
   background-color: #3b78be;
 }
 
-
-
-
-.Landing-Page{
-  display:flex;
+.Landing-Page {
+  display: flex;
   flex-direction: column;
-  width:90%;
-  max-width:600px;
+  width: 90%;
+  max-width: 600px;
   justify-content: center;
   margin: auto;
-  background:white;
-  border-radius:8px;
+  background: white;
+  border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  padding:4%;
+  padding: 4%;
   margin-top: 5% !important;
 }
 
-.blue_button{
-    margin-top: 5px;
-  padding:10px;
+.blue_button {
+  margin-top: 5px;
+  padding: 10px;
   background-color: #4d8fd9;
-  color:white;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-
-.navbar{
-  position:sticky;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:100000;
-  background-color:white;
-  margin-bottom:0%;
-  display:flex;
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  background-color: white;
+  margin-bottom: 0%;
+  display: flex;
   /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
   justify-content: space-between;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-.nav-buttons-div{
-  display:flex;
-  gap:5px;
-  padding:10px;
+.nav-buttons-div {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
 }
-
-
 
 /*Searchbar Styles*/
-.searchbar-form{
-  margin-top:5%;
-  
-  display:flex;
+.searchbar-form {
+  margin-top: 5%;
+
+  display: flex;
   justify-content: center;
-  gap:10px;
-  margin-bottom:20px;
-  flex-wrap:wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.searchbar-input{
+.searchbar-input {
   width: 95%;
   max-width: 400px;
   padding: 12px;
@@ -164,12 +156,12 @@ body {
   font-size: 16px;
 }
 
-.searchbar-input:focus{
+.searchbar-input:focus {
   outline: none;
   border-color: #4d8fd9;
 }
 
-.searchbar-button{
+.searchbar-button {
   padding: 12px 20px;
   background-color: #4d8fd9;
   color: white;
@@ -179,10 +171,9 @@ body {
   font-size: 16px;
 }
 
-.searchbar-button:hover{
+.searchbar-button:hover {
   background-color: #3b78be;
 }
-
 
 /*receipe result page*/
 
@@ -201,7 +192,7 @@ body {
   cursor: pointer;
   box-sizing: border-box;
 }
-.recipe-card:hover{
+.recipe-card:hover {
   transition: ease-in-out 0.2s;
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -220,10 +211,10 @@ body {
   z-index: 10000000;
 }
 
-.recipe-name{
-  color:#2e77ca;
+.recipe-name {
+  color: #2e77ca;
 }
-.filter-header{
+.filter-header {
   font-weight: bold;
   color: #2e77ca;
 }
@@ -239,7 +230,6 @@ body {
   border-radius: 8px;
 }
 
-
 .close-button {
   position: absolute;
   top: 8px;
@@ -250,16 +240,16 @@ body {
   cursor: pointer;
 }
 
-.search-button{
+.search-button {
   font-size: 16px;
   display: block;
   margin: auto auto;
-  padding:10px;
+  padding: 10px;
   background-color: #4d8fd9;
-  color:white;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Recipe Management Page */
@@ -303,7 +293,7 @@ body {
 .recipe-card-manage {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .recipe-card-actions {
@@ -346,7 +336,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,7 +444,6 @@ body {
   width: 100%;
 }
 
-
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
@@ -483,30 +472,29 @@ body {
 }
 /*https://stackoverflow.com/questions/5275857/highlight-label-if-checkbox-is-checked*/
 .checkbox-group input[type="checkbox"]:checked + label {
-  background-color: #4d8fd9; 
+  background-color: #4d8fd9;
   color: white;
   border-color: #4a90e2;
 }
 
-
 .filter-ui {
-            margin: 20px auto;
-            max-width: 1500px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: center;
-            background-color: white;
-            align-items: center;
-            border-radius: 8px;
-            padding: 12px 20px;
-            gap: 24px
+  margin: 20px auto;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 8px;
+  padding: 12px 20px;
+  gap: 24px;
 }
 
 .planner_page {
   width: 95%;
   margin: 40px auto;
-  background: rgba(74,144,226, 0.7);
+  background: rgba(74, 144, 226, 0.7);
   padding: 20px;
   border-radius: 8px;
 }
@@ -559,7 +547,7 @@ body {
 }
 
 .planner_choice {
-  position:relative;
+  position: relative;
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
@@ -585,21 +573,48 @@ body {
   cursor: pointer;
 }
 
+.planner_warning {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 10px auto;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
 
-.red_button{
-    margin-top: 5px;
-  padding:10px;
+.planner_warning p {
+  margin: 0;
+}
+
+.planner_warning button {
+  background: transparent;
+  border: 1px solid #856404;
+  border-radius: 4px;
+  color: #856404;
+  cursor: pointer;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.red_button {
+  margin-top: 5px;
+  padding: 10px;
   background-color: #d74d4d;
-  color:white;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .fridgeForm {
   background: #f9fafb;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   padding: 32px;
   max-width: 1000px;
   margin: 32px auto;
