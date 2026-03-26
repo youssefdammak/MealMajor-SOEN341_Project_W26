@@ -11,6 +11,7 @@ import RecipeResultPage from "./pages/RecipeResultPage.jsx";
 import RecipePage from "./pages/RecipePage.jsx";
 
 import { templateRecipes } from "./data/templateRecipes.js";
+import FridgePage from "./pages/FridgePage.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           />
           <Route path="/recipes" element={<RecipePage />} />
           <Route path="/planner" element={<WeeklyMealPlannerPage />} />
+          <Route path="/fridge" element={<FridgePage />} />
         </Routes>
       </Router>
     </>
