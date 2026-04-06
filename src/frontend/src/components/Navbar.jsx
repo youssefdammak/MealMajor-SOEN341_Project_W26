@@ -39,6 +39,9 @@ function Navbar() {
               <Link to="/profile">
                 <button className="blue_button">Profile</button>
               </Link>
+              <Link to="/fridge">
+                <button className="blue_button">My Fridge</button>
+              </Link>
               <Link to="/">
                 <button className="blue_button" onClick={logout}>
                   LogOut
@@ -49,26 +52,38 @@ function Navbar() {
 
           {path === "/search" && (
             <>
-              <Link to="/userpage">
-                <button className="blue_button">Home</button>
+              <Link to="/recipes">
+                <button className="blue_button">My Recipes</button>
               </Link>
               <Link to="/">
                 <button className="blue_button" onClick={logout}>
                   LogOut
                 </button>
+              </Link>
+              <Link to="/userpage">
+                <button className="blue_button">Home</button>
               </Link>
             </>
           )}
 
           {path === "/recipes" && (
             <>
-              <Link to="/userpage">
-                <button className="blue_button">Home</button>
+              <Link to="/planner">
+              <button className="blue_button">Plan Week</button>
+              </Link>
+              <Link to="/profile">
+                <button className="blue_button">Profile</button>
+              </Link>
+              <Link to="/fridge">
+                <button className="blue_button">My Fridge</button>
               </Link>
               <Link to="/">
                 <button className="blue_button" onClick={logout}>
                   LogOut
                 </button>
+              </Link>
+              <Link to="/userpage">
+                <button className="blue_button">Home</button>
               </Link>
             </>
           )}
@@ -90,6 +105,30 @@ function Navbar() {
               </Link>
               <Link to="/profile">
                 <button className="blue_button">Profile</button>
+              </Link>
+              <Link to="/fridge">
+                <button className="blue_button">My Fridge</button>
+              </Link>
+              <Link to="/">
+                <button className="blue_button" onClick={logout}>
+                  LogOut
+                </button>
+              </Link>
+              <Link to="/userpage">
+                <button className="blue_button">Home</button>
+              </Link>
+            </>
+          )}
+          {path === "/fridge" && (
+            <>
+              <Link to="/recipes">
+                <button className="blue_button">My Recipes</button>
+              </Link>
+              <Link to="/profile">
+                <button className="blue_button">Profile</button>
+              </Link>
+              <Link to="/planner">
+              <button className="blue_button">Plan Week</button>
               </Link>
               <Link to="/">
                 <button className="blue_button" onClick={logout}>
