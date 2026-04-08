@@ -1,7 +1,7 @@
 // pages/FridgePage.jsx
 import React, { useState, useEffect } from 'react';
 import { getFridge, saveIngredients, getMissingIngredients } from '../services/fridgeService';
-import { getGroceryPrices } from '../services/groceryPriceService';
+import { streamGroceryPrices } from '../services/groceryPriceService';
 
 const UNIT_OPTIONS = [
     { value: 'units', label: 'Units' },
@@ -124,19 +124,18 @@ export default function Fridge() {
         }
     };
 
-    const handleFindGroceryPrices = async (ingredientList) => {
+    const handleFindGroceryPrices = (ingredientList) => {
         if (!ingredientList || ingredientList.length === 0) return;
         setLoadingPrices(true);
-        setGroceryPrices(null);
+        setGroceryPrices([]);
         setError(null);
-        try {
-            const data = await getGroceryPrices(ingredientList);
-            setGroceryPrices(data.results);
-        } catch {
-            setError('Failed to fetch grocery prices. Please try again.');
-        } finally {
-            setLoadingPrices(false);
-        }
+
+        streamGroceryPrices(
+            ingredientList,
+            (result) => setGroceryPrices(prev => [...prev, result]),
+            () => setLoadingPrices(false),
+            () => { setError('Failed to fetch grocery prices. Please try again.'); setLoadingPrices(false); }
+        );
     };
 
     return (
@@ -271,7 +270,7 @@ export default function Fridge() {
                                             {offer.price ? ` — ${offer.price}` : ''}
                                             {offer.storeName ? ` @ ${offer.storeName}` : ''}
                                             {offer.link ? (
-                                                <> <a href={offer.link} target="_blank" rel="noreferrer">[View on Flipp]</a></>
+                                                <> <a href={offer.link} target="_blank" rel="noreferrer">[View Offer]</a></>
                                             ) : null}
                                         </li>
                                     ))}
