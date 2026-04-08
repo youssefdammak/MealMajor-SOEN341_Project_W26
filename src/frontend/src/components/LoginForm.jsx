@@ -1,6 +1,6 @@
 //for Backend: Please note that verification of existing user won't be done here but in the backend
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { login } from "../services/authService";
 /*https://reactrouter.com/start/declarative/navigating*/
 import { useNavigate } from "react-router-dom";

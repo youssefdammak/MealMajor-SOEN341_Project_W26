@@ -1,3 +1,4 @@
+import React from "react";
 import PreferencesForm from "../components/PreferencesForm";
 
 export default function UserPage() {

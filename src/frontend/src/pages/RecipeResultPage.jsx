@@ -1,8 +1,8 @@
+import React, { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar.jsx";
 import { getRecipes } from "../services/recipeService.js";
 import RecipeResult from "../components/RecipeResult.jsx";
 import { filterRecipes } from "../services/filterRecipes.js";
-import { useState, useEffect } from "react";
 import RecipeFilterUI from "../components/RecipeFilterUI.jsx";
 
 function ReceipeResultPage() {

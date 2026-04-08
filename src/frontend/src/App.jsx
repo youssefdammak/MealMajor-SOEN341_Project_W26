@@ -1,3 +1,4 @@
+import React from "react";
 import AuthPage from "./pages/AuthPage";
 import UserManagementPage from "./pages/UserPage";
 import LandingPage from "./pages/LandingPage";

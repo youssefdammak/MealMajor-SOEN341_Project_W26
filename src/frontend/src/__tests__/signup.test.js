@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import SignupForm from "../components/SignUpForm";
@@ -123,4 +124,4 @@ describe("SignupForm", () => {
       expect(screen.getByText(/signup failed: email already exists/i)).toBeInTheDocument();
     });
   });
-});
+});
