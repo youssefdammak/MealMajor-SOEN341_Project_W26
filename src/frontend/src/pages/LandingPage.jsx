@@ -8,7 +8,7 @@ function LandingPage() {
         <h2 style={{ textAlign: "center" }}>Welcome to MealMajor!</h2>
 
         <h4 style={{ textAlign: "center", color: "#4d8fd9" }}>
-          Create a meal plan that's tailor made for you!
+          Create a meal plan that&apos;s tailor made for you!
         </h4>
         <h4 style={{ textAlign: "center" }}>
           {" "}
