@@ -26,10 +26,14 @@ export const getGroceryPrices = async (req, res) => {
             });
 
             const searchPrompt =
-                `Search flipp.com and grocery flyers for current deals on "${ingredient}" ` +
-                `at grocery stores in Montreal, Quebec, Canada. ` +
-                `Find specific store names, prices, and product details from current weekly flyers.` +
-                'find the specific store flyer link and link it (eg "https://www.metro.ca/en/flyer", "https://www.maxi.ca/en/print-flyer?navid=flyout-L2-Flyer")';
+                `Search for current deals on "${ingredient}" at grocery stores in Montreal, Quebec, Canada. ` +
+                `For each store you find, also search for that store's official website flyer page URL ` +
+                `(for example: Metro's flyer is at https://www.metro.ca/en/flyer, ` +
+                `Maxi's flyer is at https://www.maxi.ca/en/print-flyer, ` +
+                `IGA's flyer is at https://www.iga.net/en/flyer, ` +
+                `Super C's flyer is at https://www.superc.ca/en/flyer, ` +
+                `Provigo's flyer is at https://www.provigo.ca/en/flyer). ` +
+                `Find the correct flyer page URL for each store that has the deal.`;
 
             const searchResponse = await searchModel.generateContent(searchPrompt);
             const rawDeals = searchResponse.response.text().trim();
@@ -45,7 +49,7 @@ export const getGroceryPrices = async (req, res) => {
                 `"name" (string – product name), ` +
                 `"price" (string – formatted price like "$6.57 (per kg)" or "$12.99 (500g pack)" — always start with $ and include unit/size in parentheses), ` +
                 `"storeName" (string – store name, e.g. "Maxi", "IGA", "Metro"), ` +
-                `"link" (string – use "" if no direct link available). ` +
+                `"link" (string – the official flyer page URL of that store's website, e.g. "https://www.metro.ca/en/flyer" for Metro — use "${FLIPP_URL}" only if the store's flyer URL was not found). ` +
                 `If no deals were found, return an empty array [].`;
 
             const formatResponse = await formatModel.generateContent(formatPrompt);
