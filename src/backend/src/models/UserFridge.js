@@ -28,6 +28,14 @@ const userFridgeSchema = new mongoose.Schema({
         type: [ingredientSchema],
         default: [],
     },
+    missingIngredients: {
+        type: [String],
+        default: [],
+    },
+    missingIngredientsUpdatedAt: {
+        type: Date,
+        default: null,
+    },
 });
 
 export default mongoose.model('UserFridge', userFridgeSchema);
