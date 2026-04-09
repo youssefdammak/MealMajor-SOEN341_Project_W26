@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import UserPage from "./pages/UserLanding";
 import PreferencesForm from "./components/PreferencesForm";
 import WeeklyMealPlannerPage from "./pages/WeeklyPlannerPage.jsx";
+import GroceryPage from "./pages/GroceryListPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import RecipeResultPage from "./pages/RecipeResultPage.jsx";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/recipes" element={<RecipePage />} />
           <Route path="/planner" element={<WeeklyMealPlannerPage />} />
           <Route path="/fridge" element={<FridgePage />} />
+          <Route path="/grocery" element={<GroceryPage />} />
         </Routes>
       </Router>
     </>
