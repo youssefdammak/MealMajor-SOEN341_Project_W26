@@ -1,6 +1,6 @@
 // pages/FridgePage.jsx
 import React, { useState, useEffect } from 'react';
-import { getFridge, saveIngredients, getMissingIngredients } from '../services/fridgeService';
+import { getFridge, saveIngredients, getMissingIngredients, saveMissingIngredients } from '../services/fridgeService';
 import { streamGroceryPrices } from '../services/groceryPriceService';
 
 const UNIT_OPTIONS = [
@@ -116,8 +116,15 @@ export default function Fridge() {
         setError(null);
         try {
             const data = await getMissingIngredients(userId);
+            console.log("FridgePage: Got missing ingredients from API:", data);
             setMissingIngredients(data.missingIngredients);
-        } catch {
+            
+            // Save missing ingredients to database
+            console.log("FridgePage: Saving missing ingredients to database:", data.missingIngredients);
+            await saveMissingIngredients(userId, data.missingIngredients);
+            console.log("FridgePage: Successfully saved missing ingredients to database");
+        } catch (err) {
+            console.error("FridgePage: Error generating missing ingredients:", err);
             setError('Failed to generate missing ingredients. Please try again.');
         } finally {
             setLoadingMissing(false);

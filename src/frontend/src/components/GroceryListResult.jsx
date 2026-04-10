@@ -30,12 +30,14 @@ function GroceryListResult({ groceryItems, onBought }) {
               <p className="grocery_label">
                 Price:&nbsp;
                 <span style={{ fontWeight: "bold", color: "#2e77ca" }}>
-                  ${item.price ? item.price : "N/A"}
+                  {item.price ? item.price : "N/A"}
                 </span>
               </p>
             </div>
             <button className="blue_button">
-              <a href={item.productLink}>View Product</a>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                View Product
+              </a>
             </button>
             <div className="grocery_row">
               <button className="blue_button" onClick={() => onBought(item)}>

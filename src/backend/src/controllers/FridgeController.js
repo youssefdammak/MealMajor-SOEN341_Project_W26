@@ -104,7 +104,39 @@ export const getMissingIngredients = async (req, res) => {
             )
         );
 
+        // Save missing ingredients to database
+        if (fridge) {
+            fridge.missingIngredients = missingIngredients;
+            fridge.missingIngredientsUpdatedAt = new Date();
+            await fridge.save();
+        }
+
         res.json({ missingIngredients });
+    } catch {
+        res.status(500).json({ message: "Server error" });
+    }
+};
+
+export const saveMissingIngredients = async (req, res) => {
+    try {
+        const { userId, missingIngredients } = req.body;
+
+        if (!userId || !Array.isArray(missingIngredients)) {
+            return res.status(400).json({ message: "userId and missingIngredients array are required" });
+        }
+
+        let fridge = await UserFridge.findOne({ userId });
+
+        if (!fridge) {
+            fridge = new UserFridge({ userId, missingIngredients, missingIngredientsUpdatedAt: new Date() });
+            await fridge.save();
+            return res.status(201).json(fridge);
+        }
+
+        fridge.missingIngredients = missingIngredients;
+        fridge.missingIngredientsUpdatedAt = new Date();
+        await fridge.save();
+        res.json(fridge);
     } catch {
         res.status(500).json({ message: "Server error" });
     }

@@ -70,3 +70,26 @@ export async function saveIngredients(userId, ingredients) {
         throw error;
     }
 }
+
+export async function saveMissingIngredients(userId, missingIngredients) {
+    try {
+        const response = await fetch(`${API_URL}/missing-ingredients`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ userId, missingIngredients })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message || "Failed to save missing ingredients");
+        }
+
+        return data;
+    } catch (error) {
+        console.error("Save missing ingredients error:", error.message);
+        throw error;
+    }
+}
