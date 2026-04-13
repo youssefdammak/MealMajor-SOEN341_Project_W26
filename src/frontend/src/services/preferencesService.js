@@ -1,8 +1,8 @@
-const API_URL = `${typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_BASE_URL || 'http://localhost:5000'}/api/preferences`;
+import { getAPIUrl } from "../config.js";
 
 export async function getPreferences(userId) {
     try {
-        const response = await fetch(`${API_URL}?userId=${userId}`, {
+        const response = await fetch(`${getAPIUrl("/api/preferences")}?userId=${userId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
