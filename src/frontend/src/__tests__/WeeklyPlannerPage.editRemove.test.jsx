@@ -251,7 +251,6 @@ describe("AT 7.2: Edit and Remove Weekly Meal Planner Recipe", () => {
    * Trying to add a recipe to a cell that already has one shows a warning.
    */
   test("AT 7.2 Step 7: should prevent adding to a cell that already has a recipe", async () => {
-    const user = userEvent.setup();
     recipeService.getRecipes.mockResolvedValue(mockRecipes);
     mealPlanService.getMealPlan.mockResolvedValue(existingMealPlan);
 
