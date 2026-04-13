@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/preferences";
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/preferences`;
 
 export async function getPreferences(userId) {
     try {

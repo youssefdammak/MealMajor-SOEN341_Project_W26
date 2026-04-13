@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/grocery-prices";
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/grocery-prices`;
 
 /**
  * Fetch grocery prices for given ingredients from the backend
