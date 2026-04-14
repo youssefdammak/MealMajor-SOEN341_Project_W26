@@ -52,8 +52,12 @@
 ### Lasmar Khalifa - 40321544 - Backend DEV
 | Item                        | Time      | Notes (If needed)                                               |
 |-----------------------------|-----------|------------------------------------------------------------------|
-| Backend Logic to Manage Weekly Meal Plan (Task 31)          | 180 min |                |
-| Tested Weekly Meal Plan API with Postman | 60 min |
+| Add backend APIs for user fridges          | 120 min |                |
+| Tested user fridges API with Postman | 30 min |
+| AT 6.1 | 45 min |
+| AT 6.2 | 45 min |
+| AT 7.1 | 45 min |
+| AT 7.2 | 45 min |
 
 ### Gayane Petrosyan - 40311469 - Backend/Database DEV
 | Item                        | Time      | Notes (If needed)                                               |
